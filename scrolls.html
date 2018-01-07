@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+<body>
+    <h2>Scrollspy</h2>
+<div style="position:relative;">
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-static" role="navigation" id="navbar-spy">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#scroll-first">First</a></li>
+      <li><a href="#scroll-second">Second</a></li>
+    </ul>
+  </nav>
+
+  <!-- Content -->
+  <div data-target="#navbar-spy" data-spy="scroll" style="height:150px; overflow-y:scroll; position:relative;">
+    <div id="scroll-first">
+      <!-- first block of content -->
+      he content that the user will navigate through using scrollspy needs to be inside of a container decorated with data-spy='scroll', and its data-target attribute set to the ID set on the nav element (again using CSS selector syntax). If you want to use scrollspy for the navigation of the entire page, say for a frequently asked questions (FAQ) page, you can use those attributes on the body element. Finally, the style of the containing element needs to have position:relative in order to ensure the tabs highlight correctly as the user scrolls.
+    </div>
+    <div id="scroll-second">
+      <!-- second block of content -->
+      Inside of the nav element, you'll add an unordered list. The ul element needs to have both nav and navbar-nav classes added to it. Inside of there you will add the links that will act as the navigation links to the scrollspy content. Each link will point to the ID of the content's container, again making sure to use CSS selector syntax. The link for the first data to be displayed should have the active class added.
+    </div>
+  </div>
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
